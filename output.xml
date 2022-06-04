@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220604 18:27:28.378" rpa="false" schemaversion="3">
+<suite id="s1" name="QA-Automation-Test-Robot-Framework" source="C:\Users\byuks\Desktop\QA-Automation-Test-Robot-Framework">
+<suite id="s1-s1" name="Tests" source="C:\Users\byuks\Desktop\QA-Automation-Test-Robot-Framework\Tests">
+<suite id="s1-s1-s1" name="Amazon" source="C:\Users\byuks\Desktop\QA-Automation-Test-Robot-Framework\Tests\Amazon.robot">
+<test id="s1-s1-s1-t1" name="User must sign in to check out" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220604 18:27:28.573" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
+<msg timestamp="20220604 18:27:28.583" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220604 18:27:28.583" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220604 18:27:28.572" endtime="20220604 18:27:28.585"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220604 18:27:28.585" endtime="20220604 18:27:28.585"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220604 18:27:28.571" endtime="20220604 18:27:28.586">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<doc>This is some basic info about whole suite</doc>
+<status status="FAIL" starttime="20220604 18:27:28.399" endtime="20220604 18:27:28.586"/>
+</suite>
+<status status="FAIL" starttime="20220604 18:27:28.398" endtime="20220604 18:27:28.587"/>
+</suite>
+<status status="FAIL" starttime="20220604 18:27:28.380" endtime="20220604 18:27:28.587"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="QA-Automation-Test-Robot-Framework">QA-Automation-Test-Robot-Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">QA-Automation-Test-Robot-Framework.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Amazon">QA-Automation-Test-Robot-Framework.Tests.Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

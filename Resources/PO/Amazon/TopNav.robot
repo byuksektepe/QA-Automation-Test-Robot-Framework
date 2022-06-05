@@ -2,7 +2,6 @@
 Documentation  Amazon.com top navigation
 Library  SeleniumLibrary
 
-
 *** Keywords ***
 Search for products
     Enter Search Term

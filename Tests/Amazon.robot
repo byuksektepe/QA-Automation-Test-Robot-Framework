@@ -23,7 +23,7 @@ Logged out user can add product to cart
     AmazonApp.Add Product to Cart
 
 Logged out user must sign in to check out
-    [Tags]  Smoke
+    [Tags]  LoggedOut
     AmazonApp.Search for Products
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart

@@ -6,4 +6,8 @@ Resource  Resources/PO/Amazon/Product.robot
 Resource  Resources/PO/Amazon/Cart.robot
 Resource  Resources/PO/Amazon/SignIn.robot
 
+
 *** Keywords ***
+Search For Products
+    LandingPage.Load
+    Lan

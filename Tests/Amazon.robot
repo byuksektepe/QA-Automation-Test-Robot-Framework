@@ -2,8 +2,8 @@
 Documentation  This is some basic info about whole suite
 Library  SeleniumLibrary
 
-*** Variables ***
-
+Resource  Resources/Common.robot
+Resource  Resources/Amazon.robot
 
 *** Test Cases ***
 User must sign in to check out

@@ -3,7 +3,7 @@ Documentation  This is some basic info about whole suite
 Library  SeleniumLibrary
 
 Resource  Resources/Common.robot
-Resource  Resources/Amazon.robot
+Resource  Resources/AmazonApp.robot
 
 *** Test Cases ***
 User must sign in to check out

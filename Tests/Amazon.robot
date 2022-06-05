@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  This is some basic info about whole suite
+Documentation  This is some basic Amazon.com test
 
 Resource  ../Resources/Common.robot
 Resource  ../Resources/AmazonApp.robot

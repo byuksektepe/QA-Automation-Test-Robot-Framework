@@ -1,16 +1,33 @@
 *** Settings ***
 Documentation  This is some basic info about whole suite
-Library  SeleniumLibrary
 
-Resource  Resources/Common.robot
-Resource  Resources/AmazonApp.robot
+Resource  ../Resources/Common.robot
+Resource  ../Resources/AmazonApp.robot
+Test Setup    Begin Web Test
+Test Teardown    End Web Test
 
 *** Test Cases ***
-User must sign in to check out
-    [Documentation]  This is some basic info about the test
+Logged out user can search for products
     [Tags]  Smoke
-    Open Browser  https://www.amazon.com/  chrome
-    Close Browser
+    AmazonApp.Search for Products
+
+Logged out user can view a product
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
+
+Logged out user can add product to cart
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
+    AmazonApp.Add Product to Cart
+
+Logged out user must sign in to check out
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
+    AmazonApp.Add Product to Cart
+    AmazonApp.Begin Checkout
 
 
-*** Keywords ***
+

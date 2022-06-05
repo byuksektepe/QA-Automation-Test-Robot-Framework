@@ -1,34 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220605 15:05:00.654" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.7 on win32)" generated="20220606 02:03:35.472" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon" source="C:\Users\byuks\Desktop\QA-Automation-Test-Robot-Framework\tests\Amazon.robot">
-<test id="s1-t1" name="User must sign in to check out" line="9">
+<test id="s1-t1" name="Logged out user can search for products" line="10">
+<kw name="Begin Web Test" library="Common" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.amazon.com/</arg>
+<arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220605 15:05:00.848" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
-<status status="PASS" starttime="20220605 15:05:00.847" endtime="20220605 15:05:05.791"/>
+<msg timestamp="20220606 02:03:35.702" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220606 02:03:35.702" endtime="20220606 02:03:36.793"/>
 </kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220606 02:03:36.793" endtime="20220606 02:03:36.920"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:35.702" endtime="20220606 02:03:36.920"/>
+</kw>
+<kw name="Search For Products" library="AmazonApp">
+<kw name="Load Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220606 02:03:36.921" level="INFO">Opening url 'https://amazon.com'</msg>
+<status status="PASS" starttime="20220606 02:03:36.921" endtime="20220606 02:03:39.587"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:36.921" endtime="20220606 02:03:39.588"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Cart">
+<arg>You are on amazon.com</arg>
+<msg timestamp="20220606 02:03:39.588" level="FAIL">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20220606 02:03:39.588" endtime="20220606 02:03:39.588"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:39.588" endtime="20220606 02:03:39.589"/>
+</kw>
+<kw name="Search for products" library="TopNav">
+<status status="NOT RUN" starttime="20220606 02:03:39.589" endtime="20220606 02:03:39.589"/>
+</kw>
+<kw name="Verify Seach Completed" library="SearchResults">
+<status status="NOT RUN" starttime="20220606 02:03:39.589" endtime="20220606 02:03:39.589"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:36.920" endtime="20220606 02:03:39.589"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220605 15:05:05.792" endtime="20220605 15:05:07.879"/>
+<status status="PASS" starttime="20220606 02:03:39.590" endtime="20220606 02:03:41.695"/>
 </kw>
-<doc>This is some basic info about the test</doc>
+<status status="PASS" starttime="20220606 02:03:39.590" endtime="20220606 02:03:41.695"/>
+</kw>
 <tag>Smoke</tag>
-<status status="PASS" starttime="20220605 15:05:00.847" endtime="20220605 15:05:07.879"/>
+<status status="FAIL" starttime="20220606 02:03:35.701" endtime="20220606 02:03:41.696">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t2" name="Logged out user can view a product" line="14">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220606 02:03:41.698" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220606 02:03:41.698" endtime="20220606 02:03:42.764"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220606 02:03:42.764" endtime="20220606 02:03:42.881"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:41.698" endtime="20220606 02:03:42.881"/>
+</kw>
+<kw name="Search For Products" library="AmazonApp">
+<kw name="Load Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220606 02:03:42.882" level="INFO">Opening url 'https://amazon.com'</msg>
+<status status="PASS" starttime="20220606 02:03:42.882" endtime="20220606 02:03:44.813"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:42.882" endtime="20220606 02:03:44.813"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Cart">
+<arg>You are on amazon.com</arg>
+<msg timestamp="20220606 02:03:44.814" level="FAIL">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20220606 02:03:44.814" endtime="20220606 02:03:44.814"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:44.814" endtime="20220606 02:03:44.814"/>
+</kw>
+<kw name="Search for products" library="TopNav">
+<status status="NOT RUN" starttime="20220606 02:03:44.814" endtime="20220606 02:03:44.814"/>
+</kw>
+<kw name="Verify Seach Completed" library="SearchResults">
+<status status="NOT RUN" starttime="20220606 02:03:44.814" endtime="20220606 02:03:44.814"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:42.882" endtime="20220606 02:03:44.815"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:44.815" endtime="20220606 02:03:44.815"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220606 02:03:44.816" endtime="20220606 02:03:46.907"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:44.816" endtime="20220606 02:03:46.907"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220606 02:03:41.697" endtime="20220606 02:03:46.908">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t3" name="Logged out user can add product to cart" line="19">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220606 02:03:46.910" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220606 02:03:46.910" endtime="20220606 02:03:47.995"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220606 02:03:47.995" endtime="20220606 02:03:48.126"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:46.910" endtime="20220606 02:03:48.126"/>
+</kw>
+<kw name="Search For Products" library="AmazonApp">
+<kw name="Load Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220606 02:03:48.128" level="INFO">Opening url 'https://amazon.com'</msg>
+<status status="PASS" starttime="20220606 02:03:48.127" endtime="20220606 02:03:50.015"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:48.127" endtime="20220606 02:03:50.016"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Cart">
+<arg>You are on amazon.com</arg>
+<msg timestamp="20220606 02:03:50.016" level="FAIL">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20220606 02:03:50.016" endtime="20220606 02:03:50.016"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:50.016" endtime="20220606 02:03:50.017"/>
+</kw>
+<kw name="Search for products" library="TopNav">
+<status status="NOT RUN" starttime="20220606 02:03:50.017" endtime="20220606 02:03:50.017"/>
+</kw>
+<kw name="Verify Seach Completed" library="SearchResults">
+<status status="NOT RUN" starttime="20220606 02:03:50.017" endtime="20220606 02:03:50.017"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:48.127" endtime="20220606 02:03:50.017"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:50.018" endtime="20220606 02:03:50.018"/>
+</kw>
+<kw name="Add Product to Cart" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:50.018" endtime="20220606 02:03:50.018"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220606 02:03:50.019" endtime="20220606 02:03:52.109"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:50.019" endtime="20220606 02:03:52.109"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220606 02:03:46.909" endtime="20220606 02:03:52.110">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</status>
+</test>
+<test id="s1-t4" name="Logged out user must sign in to check out" line="25">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220606 02:03:52.112" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220606 02:03:52.112" endtime="20220606 02:03:53.262"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220606 02:03:53.262" endtime="20220606 02:03:53.385"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:52.111" endtime="20220606 02:03:53.385"/>
+</kw>
+<kw name="Search For Products" library="AmazonApp">
+<kw name="Load Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220606 02:03:53.386" level="INFO">Opening url 'https://amazon.com'</msg>
+<status status="PASS" starttime="20220606 02:03:53.386" endtime="20220606 02:03:55.817"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:53.386" endtime="20220606 02:03:55.817"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Cart">
+<arg>You are on amazon.com</arg>
+<msg timestamp="20220606 02:03:55.818" level="FAIL">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20220606 02:03:55.818" endtime="20220606 02:03:55.818"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:55.818" endtime="20220606 02:03:55.818"/>
+</kw>
+<kw name="Search for products" library="TopNav">
+<status status="NOT RUN" starttime="20220606 02:03:55.819" endtime="20220606 02:03:55.819"/>
+</kw>
+<kw name="Verify Seach Completed" library="SearchResults">
+<status status="NOT RUN" starttime="20220606 02:03:55.819" endtime="20220606 02:03:55.819"/>
+</kw>
+<status status="FAIL" starttime="20220606 02:03:53.385" endtime="20220606 02:03:55.819"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:55.819" endtime="20220606 02:03:55.819"/>
+</kw>
+<kw name="Add Product to Cart" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:55.820" endtime="20220606 02:03:55.820"/>
+</kw>
+<kw name="Begin Checkout" library="AmazonApp">
+<status status="NOT RUN" starttime="20220606 02:03:55.820" endtime="20220606 02:03:55.820"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220606 02:03:55.821" endtime="20220606 02:03:57.919"/>
+</kw>
+<status status="PASS" starttime="20220606 02:03:55.821" endtime="20220606 02:03:57.919"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220606 02:03:52.111" endtime="20220606 02:03:57.920">Keyword 'Cart.Wait Until Page Contains' expected 0 arguments, got 1.</status>
 </test>
 <doc>This is some basic info about whole suite</doc>
-<status status="PASS" starttime="20220605 15:05:00.656" endtime="20220605 15:05:07.880"/>
+<status status="FAIL" starttime="20220606 02:03:35.474" endtime="20220606 02:03:57.921"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="0" fail="4" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="Amazon">Amazon</stat>
 </suite>
 </statistics>
 <errors>

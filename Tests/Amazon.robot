@@ -8,22 +8,22 @@ Test Teardown    End Web Test
 
 *** Test Cases ***
 Logged out user can search for products
-    [Tags]  Smoke
+    [Tags]  Search Product
     AmazonApp.Search for Products
 
 Logged out user can view a product
-    [Tags]  Smoke
+    [Tags]  View Product
     AmazonApp.Search for Products
     AmazonApp.Select Product from Search Results
 
 Logged out user can add product to cart
-    [Tags]  Smoke
+    [Tags]  Add to Cart
     AmazonApp.Search for Products
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart
 
 Logged out user must sign in to check out
-    [Tags]  LoggedOut
+    [Tags]  User Must Sign In
     AmazonApp.Search for Products
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart

@@ -14,6 +14,7 @@
 ### Test Log [ FAIL ] - 6/6/2022
 
 <p>Fail reason "Button with locator 'id=add-to-cart' not found.", amazon has a dynamic id on add to cart button. Id locator replaced with text element.</p>
+
 ![TestFailLog](https://user-images.githubusercontent.com/61010367/172076053-719a0dd2-8806-4044-a6fb-2d8bfd96db66.png)
 
 

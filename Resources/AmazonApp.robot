@@ -9,7 +9,8 @@ Resource  PO/Amazon/SignIn.robot
 
 *** Keywords ***
 Search For Products
-    LandingPage.Load Page
+    [Arguments]    ${START_URL}
+    LandingPage.Load Page    ${START_URL}
     LandingPage.Verify Page Loaded
     TopNav.Search for products
     SearchResults.Verify Seach Completed

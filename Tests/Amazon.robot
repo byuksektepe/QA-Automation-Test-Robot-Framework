@@ -3,7 +3,7 @@ Documentation  This is some basic Amazon.com test
 
 Resource  ../Resources/Common.robot
 Resource  ../Resources/AmazonApp.robot
-Test Setup    Begin Web Test
+Test Setup    Begin Web Test    ${BROWSER}
 Test Teardown    End Web Test
 
 *** Variables ***
@@ -15,7 +15,7 @@ ${PRODUCT_LINK} =    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/di
 *** Test Cases ***
 Logged out user can search for products
     [Tags]  Search Product
-    AmazonApp.Search for Products
+    AmazonApp.Search for Products    ${START_URL}
 
 Logged out user can view a product
     [Tags]  View Product

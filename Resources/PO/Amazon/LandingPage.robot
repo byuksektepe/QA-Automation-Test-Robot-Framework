@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Load Page
+    [Arguments]  ${START_URL}
     Go To  ${START_URL}
 
 Verify Page Loaded

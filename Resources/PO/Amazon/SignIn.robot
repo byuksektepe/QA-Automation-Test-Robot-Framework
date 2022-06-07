@@ -3,5 +3,5 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Verify Page Loaded
-    page should contain     Email or mobile phone number
+    Page Should Contain    Sign-In
     Element Text Should Be  id=continue-announce   Continue

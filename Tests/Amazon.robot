@@ -9,8 +9,8 @@ Test Teardown    End Web Test
 *** Variables ***
 ${BROWSER} =    chrome
 ${START_URL} =    https://amazon.com
-${SEARCH_TERM} =    asus rog mouse
-${PRODUCT_LINK} =    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[4]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a
+${SEARCH_TERM} =    msi laptop
+${PRODUCT_LINK} =    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a
 
 *** Test Cases ***
 Logged out user can search for products

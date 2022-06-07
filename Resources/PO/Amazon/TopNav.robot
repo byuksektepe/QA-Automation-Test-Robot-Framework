@@ -8,7 +8,7 @@ Search for products
     Submit Search
 
 Enter Search Term
-    Input Text  id=twotabsearchtextbox    Xbox Series X Console
+    Input Text  id=twotabsearchtextbox    ${SEARCH_TERM}
 
 Submit Search
     Click Button  css=#nav-search-submit-button

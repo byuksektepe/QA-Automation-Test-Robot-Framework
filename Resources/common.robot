@@ -5,6 +5,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Begin Web Test
+    [Arguments]    ${BROWSER}
     Open Browser  about:blank  ${BROWSER}
     Maximize Browser Window
 

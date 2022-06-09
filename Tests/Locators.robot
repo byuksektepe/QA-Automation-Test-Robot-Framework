@@ -13,5 +13,19 @@ Should be able to search for product
     Click Button  Add to Cart
     Close Browser
 
+Absolute css and xpath locators
+    [Documentation]    Guide for me next projects
+    [Tags]    Absolute Locators
+
+    Click Element    xpath=//div[@id='some-id']//form//a
+    Click Element    css=div[id='some-id']>form>a
+
+Relative css and xpath locators
+    [Documentation]   Guide for me next projects
+    [Tags]    Relative Locators
+
+    Click Element    xpath=//div[@id='some-id']/form/a
+    Click Element    css=div[id='some-id'] form a
+
 
 *** Keywords ***

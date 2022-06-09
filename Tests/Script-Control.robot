@@ -18,6 +18,12 @@ IF/ELSE Control
     Run Keyword if    ${VAR} > 150    Some Test Keyword    ELSE    Some Test Keyword 2
     Run Keyword if    ${VAR} > 150    Some Test Keyword    ELSE IF ${VAR} == 20    Some Test Keyword   ELSE    Some Test Keyword 2
 
+    # OR
+
+    IF  10>5    # ELSE IF    ELSE
+        # Do Something
+    END
+
 LOOP Control
     [Documentation]    LOOP control guide, copied from FaustX's QA Test
     [Arguments]    ${ORDER_MAX_RANGE}    ${SET_CLICK_VAR}    ${DROPDOWN_CONTENT}    ${i}

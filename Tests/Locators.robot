@@ -31,7 +31,7 @@ Partial css and xpath locators
     [Documentation]   Guide for me next projects, for non static attributes
     [Tags]    Partial Locators
 
-    # xpath=//div[@id='Sumbit-5675416'] a number is a changable value
+    # xpath=//div[@id='Sumbit-5675416'] a number is a changeable value
     Click Element    xpath=//div[starts-with(@id, 'Submit')]
     Click Element    css=div[id^='Submit']
 

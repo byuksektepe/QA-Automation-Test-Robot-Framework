@@ -13,8 +13,9 @@ How Use Dictionaries
     [Tags]    Dictionaries
 
     open browser  about:blank   chrome
-    Go To    ${URL.${ENV}}
-    Sleep    5s
+    Go To    ${URL.${ENV}}    # OR
+    Go To    ${URL.qa}
+    Sleep    2s
     close browser
 
 *** Test Cases ***

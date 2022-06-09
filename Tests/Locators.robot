@@ -13,6 +13,8 @@ Should be able to search for product
     Click Button  Add to Cart
     Close Browser
 
+
+*** Keywords ***
 Absolute css and xpath locators
     [Documentation]    Guide for me next projects, directly select
     [Tags]    Absolute Locators
@@ -27,7 +29,4 @@ Relative css and xpath locators
     Click Element    xpath=//div[@id='some-id']/form/a
     Click Element    css=div[id='some-id'] form a
 
-
-
-
-*** Keywords ***
+    Click Element    xpath=a[contains(text(), 'Some Text You Want a Find']

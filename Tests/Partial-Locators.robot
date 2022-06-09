@@ -23,8 +23,8 @@ Partial "ends-with" css and xpath locators
 
 Partial "contains" css and xpath locators
     [Documentation]   Guide for me next projects, for non static attributes
-    [Tags]    Partial Locators    Ends-With
+    [Tags]    Partial Locators    Contains
 
-    # xpath=//div[@id='5675416-Sumbit'] a number is a changeable value
-    Click Element    xpath=//div[ends-with(@id, 'Submit')]
-    Click Element    css=div[id$='Submit']
+    # xpath=//div[@id='5675416-Sumbit-9822093'] a number is a changeable value
+    Click Element    xpath=//div[contains(@id, 'Submit')]
+    Click Element    css=div[id*='Submit']

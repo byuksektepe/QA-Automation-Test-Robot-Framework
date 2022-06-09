@@ -19,6 +19,14 @@ IF/ELSE Control
     Run Keyword if    ${VAR} > 150    Some Test Keyword    ELSE IF ${VAR} == 20    Some Test Keyword   ELSE    Some Test Keyword 2
 
 LOOP Control
-    [Documentation]    LOOP control guide
+    [Documentation]    LOOP control guide, copied from FaustX's QA Test
+    [Arguments]    ${ORDER_MAX_RANGE}    ${SET_CLICK_VAR}    ${DROPDOWN_CONTENT}    ${i}
+    [Tags]    LOOP
+    FOR  ${i}  IN RANGE  1      ${ORDER_MAX_RANGE}
+        IF   ${i} != 5
+            Click Element       ${DROPDOWN_CONTENT}\(${i})
+            Run Keyword         ${SET_CLICK_VAR}
+        END
+    END
 
 

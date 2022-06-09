@@ -27,22 +27,6 @@ Relative css and xpath locators
     Click Element    xpath=//div[@id='some-id']/form/a
     Click Element    css=div[id='some-id'] form a
 
-Partial starts-with css and xpath locators
-    [Documentation]   Guide for me next projects, for non static attributes
-    [Tags]    Partial Locators    Starts-With
-
-    # xpath=//div[@id='Sumbit-5675416'] a number is a changeable value
-    Click Element    xpath=//div[starts-with(@id, 'Submit')]
-    Click Element    css=div[id^='Submit']
-
-Partial ends-with css and xpath locators
-    [Documentation]   Guide for me next projects, for non static attributes
-    [Tags]    Partial Locators    Ends-With
-
-    # xpath=//div[@id='5675416-Sumbit'] a number is a changeable value
-    Click Element    xpath=//div[ends-with(@id, 'Submit')]
-    Click Element    css=div[id$='Submit']
-
 
 
 

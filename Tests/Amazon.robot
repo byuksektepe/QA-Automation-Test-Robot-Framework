@@ -3,6 +3,8 @@ Documentation  This is some basic Amazon.com test
 
 Resource  ../Resources/Common.robot
 Resource  ../Resources/AmazonApp.robot
+Resource    ../Data/GlobalVariables.robot
+Resource    ../Resources/DataManager.robot
 Test Setup    Begin Web Test    ${BROWSER}
 Test Teardown    End Web Test
 
@@ -34,6 +36,12 @@ Logged out user must sign in to check out
     AmazonApp.Select Product from Search Results
     AmazonApp.Add Product to Cart
     AmazonApp.Begin Checkout
+
+Call Data Manager and Get CSV Data
+    [Tags]    NO557-A    Get CSV Data
+    AmazonApp.Search for Products    ${START_URL}
+    ${LoginData} =    DataManager.Get CSV Data    ${USER_CSV_PATH}
+
 
 
 

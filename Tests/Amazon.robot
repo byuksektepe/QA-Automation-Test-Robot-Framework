@@ -41,6 +41,7 @@ Call Data Manager and Get CSV Data
     [Tags]    NO557-A    Get CSV Data
     AmazonApp.Search for Products    ${START_URL}
     ${LoginData} =    DataManager.Get CSV Data    ${USER_CSV_PATH}
+    Log    ${LoginData}
 
 
 

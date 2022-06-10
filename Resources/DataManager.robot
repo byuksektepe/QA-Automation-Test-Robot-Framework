@@ -6,3 +6,4 @@ Library    ../Libraries/csv_read.py
 Get CSV Data
     [Arguments]    ${filepath}
     ${Data} =    read csv file   ${filepath}
+    [Return]    ${Data}
